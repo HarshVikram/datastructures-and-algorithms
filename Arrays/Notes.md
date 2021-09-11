@@ -1,4 +1,4 @@
-#ARRAYS
+# ARRAYS
 Java provides a data structure, the array, which stores a fixed-size sequential collection of elements of the same type. An array is used to store a collection of data, but it is often more useful to think of an array as a collection of variables of the same type.
 * In Java all arrays are dynamically allocated.(discussed below)
 * The variables in the array are ordered and each have an index beginning from 0.
