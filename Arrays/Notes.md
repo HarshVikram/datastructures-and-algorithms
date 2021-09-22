@@ -1,10 +1,10 @@
 # ARRAYS
-Java provides a data structure, the array, which stores a fixed-size sequential collection of elements of the same type. An array is used to store a collection of data, but it is often more useful to think of an array as a collection of variables of the same type.
-* In Java all arrays are dynamically allocated.(discussed below)
+Java provides a data structure, the array, which stores a fixed-size sequential collection of elements of the same type. An array is used to store a collection of data, but it is often more useful to think of an array as a collection of variables of the same type,  stored in a contiguous memory location.
+* In Java all arrays are dynamically allocated.
 * The variables in the array are ordered and each have an index beginning from 0.
 * Java array can be also be used as a static field, a local variable or a method parameter.
 * The size of an array must be specified by an int or short value and not long.
-* The direct superclass of an array type is Object.
+* The direct superclass of an array type is Object, and implements the Serializable as well as Cloneable interfaces.
 
 Array can contain primitives (int, char, etc.) as well as object (or non-primitive) references of a class depending on the definition of the array. In case of primitive data types, the actual values are stored in contiguous memory locations. In case of objects of a class, the actual objects are stored in heap segment.
 
@@ -148,6 +148,53 @@ class Main {
     }
   	public static int[] input() {
         return new int[]{1,2,3};
+    }
+}
+```
+
+## Multi-Dimensional Arrays
+Multidimensional Arrays can be defined in simple words as array of arrays. Data in multidimensional arrays are stored in tabular form (in row major order).
+```java
+data_type[1st dimension][2nd dimension][]..[Nth dimension] name = new data_type[size1][size2]….[sizeN];
+```
+### Two – dimensional Array (2D Arrays)
+Two – dimensional array is the simplest form of a multidimensional array. A two – dimensional array can be seen as an array of one – dimensional array for easier understanding.
+```java
+class Main {
+    public static void main(String[] args)
+    {
+  
+        int[][] array = new int[2][2];
+  		for (int i = 0; i < 2; i++)
+            for (int j = 0; j < 2; j++)
+                System.out.println("arr[" + i + "][" + j + "] = "
+                                   + arr[i][j]);
+        for (int i = 0; i < 2; i++)
+            for (int j = 0; j < 2; j++)
+                System.out.println("arr[" + i + "][" + j + "] = "
+                                   + arr[i][j]);
+    }
+}
+```
+
+### Three – dimensional Array (3D Array)
+Three – dimensional array is a complex form of a multidimensional array. A three – dimensional array can be seen as an array of two – dimensional array for easier understanding.
+```java
+
+class GFG {
+    public static void main(String[] args)
+    {
+  
+        int[][][] arr = { { { 1, 2 }, { 3, 4 } }, { { 5, 6 }, { 7, 8 } } };
+  
+        for (int i = 0; i < 2; i++)
+            for (int j = 0; j < 2; j++)
+                for (int z = 0; z < 2; z++)
+                    System.out.println("arr[" + i
+                                       + "]["
+                                       + j + "]["
+                                       + z + "] = "
+                                       + arr[i][j][z]);
     }
 }
 ```
