@@ -54,7 +54,7 @@ class Stack {
             System.out.printf("\nStack Underflow");
             System.exit(1);
         }
-		System.out.println("Linked List: ");
+		System.out.println("Stack: ");
 		while (temp != null) {
 			System.out.println("|" + s[i] + "|");
 			temp = temp.next;
