@@ -1,5 +1,4 @@
 // IMPLEMENTING STACKS USING ARRAYS
-
 import java.io.*;
 import java.util.*;
 
@@ -38,11 +37,11 @@ class Stack {
 		return -1;
 	}
 	public void display() {
-		for (int i = 0; i <= top; i++)
-			System.out.println(s[i]);
+		for (int i = top; i >= 0; i--)
+			System.out.println("|" + s[i] + "|");
 	}
-	public void size() {
-		System.out.println(top + 1);
+	public int size() {
+		return top + 1;
 	}
 	public Boolean isFull() {
 		return top == capacity;
@@ -61,7 +60,7 @@ public class Main {
 		Stack stack = new Stack(n);
 		
 		while (true) {
-			System.out.println("\nEnter your choice\n1. PUSH\n2. POP\n3. DISPLAY\n4. SIZE\n5. EXIT");
+			System.out.println("\nEnter your choice\n1. PUSH\n2. POP\n3. PEEK\n4. DISPLAY\n5. SIZE\n6. EXIT");
 			int choice = sc.nextInt();
 			switch (choice) {
 				case 1:
@@ -73,12 +72,15 @@ public class Main {
 			     	stack.pop();
 			     	break;
 			    case 3:
-			        stack.display();
+			     	System.out.println("The top element is " + stack.peek());
 			     	break;
 			    case 4:
-			     	stack.size();
+			        stack.display();
 			     	break;
 			    case 5:
+			     	System.out.println("The size of stack is " + stack.size());
+			     	break;
+			    case 6:
 			     	System.exit(0); 
 			    default:
 			     	System.out.println("Wrong option");
