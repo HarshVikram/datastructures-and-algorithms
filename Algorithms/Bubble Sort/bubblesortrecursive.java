@@ -6,7 +6,7 @@ public class Main {
 	public static void sort(int a[], int n) {
 		if (n == 1)
 			return;
-			
+
 		for (int i = 0; i < a.length - 1; i++) {
 			if (a[i] > a[i + 1]) {
 				int temp = a[i];
@@ -33,7 +33,7 @@ public class Main {
 		for (int i = 0; i < n; i++)
             a[i] = sc.nextInt();
 
-        sort(a);
+        sort(a, n);
         print(a);       
 	}
 }
